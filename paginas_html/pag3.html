@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="../paginas_css/stylepag3.css">
+  <link rel="stylesheet" href="../paginas_css/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/">
+  <link rel="shortcut icon" href="../LogoProjeto.png" type="image/x-icon">
+
+  <script>
+    function validar() {
+     // document.getElementById("myform").submit();      
+      window.open("index.html");
+    }
+
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+        <a href="index.html">
+            <div class="logo"><img src="../LogoProjeto.png" alt="Logo"></div>
+        </a>
+        <details>
+            <summary class="indice" tabindex="1">☰</summary>
+            <ul class="ulnav">
+                <li class="headernav"><a class="navlink" tabindex="2" href="index.html" rel="next"><div class="inicio">Início</div></a></li>
+                <li class="headernav"><a class="navlink" tabindex="3" href="pag6.html" rel="next"><div class="sobre-nos">Fale conosco</div></a></li>
+                <li class="headernav"><a class="navlink" tabindex="4" href="loading-cadastro.html" rel="nest"><div class="cadastre-se">Cadastre-se</div></a></li>
+                <li class="headernav" class="navlink" tabindex="5" id="accessed"><div class="login">Login</div></li>
+                <li class="headernav"><a class="navlink" tabindex="6" href="pag2.html" rel="next"><div class="goty">GOTY</div></a></li>
+                <li class="headernav"><a class="navlink" tabindex="7" href="pag5.html" rel="next"><div class="historia">História dos Consoles</div></a></li>
+            </ul>
+        </details>
+    </nav>
+</header>
+  <main>
+    <section>
+      <div class="container">
+        <form class="login-form" id="myform" onsubmit="return validar();">
+          <div class="login-header">
+            <h1 class="texto-login">Login</h1>
+          </div>
+
+          <div class="textinho">
+            <h2>Fique por dentro de tudo sobre jogos que a internet tem a oferecer</h2>
+          </div>
+
+            <img class="foto" src="../midias_pag4/usuario-icon.png" alt="foto de usuario">
+
+          <div class="campo-login">
+
+            <div class="label-field">
+            <label for="name">Nome de Usuário</label>
+            </div>
+
+            <div class="input-field">
+            <input type="text" id="name" name="name" placeholder="Insira seu Nome de Usuário" required>
+            </div>
+
+            <div class="label-field">
+            <label for="password">Senha</label>
+            </div>
+
+            <div class="input-field">
+            <input type="password" id="password" name="password" placeholder="Insira sua Senha" required>
+            </div>      
+
+          </div>
+
+          <div class="buttons">
+            <a href="index.html" rel="next" target="_self"><span><input type="submit" class="entrar" value="Entrar"></span></a>
+            <a href="pag4.html" rel="next" target="_self"><div class="cadastro">Cadastre-se</div></a>
+          </div>
+
+          <h4 class="formas-de-entrar-texto">Outras formas de entrar</h4>
+
+          <div class="formas-de-entrar">
+            <a href="https://pt-br.facebook.com/" rel="external" target="_blank">
+              <img class="face-icon" src="../midias_pag4/face-icon..png" alt="Facebook logo">
+            </a>
+            <a href="https://accounts.google.com/" rel="external" target="_blank">
+              <img class="google-icon" src="../midias_pag4/google-icon.png" alt="Google logo">
+            </a>
+          </div>
+          
+        </form>
+        </div>
+    </section>
+  </main>
+</body>
+</html>
+
+

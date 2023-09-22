@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game topics</title>
+    <link rel="stylesheet" href="../paginas_css/style.css">
+    <link rel="stylesheet" href="../paginas_css/stylepag2.css">
+    <link rel="shortcut icon" href="../LogoProjeto.png" type="image/x-icon">
+    <style>
+        /*Ajustes de responsividade*/
+
+        /*Celulares: */
+        @media (min-width: 0px) and (max-width: 480px){
+            nav{
+                font-size: 3.8vw;
+                width: 100%;
+                height: 7%;
+                gap: 0;
+            }
+            .logo{
+                margin-top: 1%;
+                margin-left: 88%;
+            }
+            .logo > img{
+                width: 10vw;
+                height: 10vw;
+            }
+            .headernav{
+                display: flex;
+                position: relative;
+                transition: 0.4s all ease;
+                gap: 0;
+            }
+
+            .headernav::after{
+                content: '';
+                position: absolute;
+                width: 100%;
+                transform: scaleX(0);
+                height: 2px;
+                bottom: 5px;
+                left: 0;
+                background-color: #0EF6CC;
+                transform-origin: bottom right;
+                transition: transform 0.5s ease-out;
+            }
+
+            .headernav:hover{
+                color: #F4FEFD;
+                transition: 0.4s all ease;
+            }
+
+            .headernav:hover::after{
+                transform: scaleX(1);
+                transform-origin: bottom left;
+            }
+            .ulnav{
+                gap: 0;
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                margin: 0px 0px 0px 0px;
+            }
+            .navlink{
+                text-decoration: none;
+                color: #F4FEFD;
+            }
+            #accessed{
+                font-weight: bolder;
+            }
+            .corpo{
+                margin-left: 5%;
+                width: 90%;
+                font-size: 0.8em;
+                text-align: justify;
+            }
+            .corpo > h1{
+                font-size: 2.3em;
+            }
+            .corpo > h2{
+                font-size: 2em;
+            }
+            .container{
+                flex-direction: column;
+                width: 100%;
+
+            }
+            .jogo{
+                width: 60vw;
+                height: 80vw;
+            }
+            .jogo > img{
+                height: 50vw;
+            }
+            .jogo > p{
+                font-size: 1.6em;
+            }
+            .jogo:hover{
+                filter: grayscale(0%);
+                width: 62vw;
+                transition: 0.4s ease-in;
+            }
+
+            .jogo:hover img{
+                height: 60vw;
+                transition: cubic-bezier(0.5,0.2,0,2,0.4);
+            }
+        }
+
+        /*Tablets e telas menores*/
+        @media (min-width: 481px) and (max-width: 768px){
+            nav{
+                font-size: 2.6vw;
+                width: 100%;
+                height: 7%;
+                gap: 0;
+            }
+            .logo{
+                margin-top: 1%;
+                margin-left: 92%;
+            }
+            .logo > img{
+                width: 40px;
+                height: 40px;
+            }
+            .headernav{
+                display: flex;
+                position: relative;
+                transition: 0.4s all ease;
+                gap: 0;
+            }
+            .ulnav{
+                gap: 0;
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                margin: 0px 0px 0px 0px;
+            }
+            .corpo{
+                margin-left: 5%;
+                width: 90%;
+                font-size: 0.8em;
+                text-align: justify;
+            }
+            .corpo > h1{
+                font-size: 2.8em;
+            }
+            .corpo > h2{
+                font-size: 2.3em;
+            }
+            .corpo > p{
+                font-size: 1.3em;
+            }
+            .container{
+                flex-direction: row;
+                width: 100%;
+            }
+            .jogo{
+                width: 38vw;
+                height: 52vw;
+            }
+            .jogo > img{
+                height: 36vw;
+            }
+            .jogo > p{
+                font-size: 1.7em;
+            }
+            .jogo:hover{
+                filter: grayscale(0%);
+                width: 40vw;
+                transition: 0.4s ease-in;
+            }
+            .jogo:hover img{
+                height: 38vw;
+                transition: cubic-bezier(0.5,0.2,0,2,0.4);
+            }
+        }
+
+        @media (min-width: 620px) and (max-width: 768px){
+            nav{
+                font-size: 2.2vw;
+            }
+        }
+        
+        @media (min-width: 768px) and (max-width: 860px){
+            .jogo{
+                width: 42vw;
+                height: 54vw;
+            }
+            .jogo > img{
+                height: 38vw;
+            }
+            .jogo > p{
+                font-size: 1.7em;
+            }
+            .jogo:hover{
+                filter: grayscale(0%);
+                width: 42vw;
+                transition: 0.4s ease-in;
+            }
+            .jogo:hover img{
+                height: 39vw;
+                transition: cubic-bezier(0.5,0.2,0,2,0.4);
+            }
+        }
+        
+        /*Tablets grandes e acima*/
+        @media (min-width: 768px) and (max-width: 1024px){
+            nav{
+                font-size: 1.9vw;
+                width: 100%;
+                height: 7%;
+                gap: 0;
+            }
+            .logo{
+                margin-top: 1%;
+                margin-left: 92%;
+            }
+            .headernav{
+                display: flex;
+                position: relative;
+                transition: 0.4s all ease;
+                gap: 0;
+            }
+            .ulnav{
+                gap: 0;
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                margin: 0px 0px 0px 0px;
+            }
+            .corpo{
+                margin-left: 5%;
+                width: 90%;
+                font-size: 0.8em;
+            }
+            .corpo > h1{
+                font-size: 3em;
+            }
+            .corpo > h2{
+                font-size: 2.5em;
+            }
+            .corpo > p{
+                font-size: 1.3em;
+            }
+            .container{
+                flex-direction: row;
+                width: 100%;
+            }
+            .jogo{
+                width: 27vw;
+                height: 38vw;
+            }
+            .jogo > img{
+                height: 27vw;
+            }
+            .jogo > p{
+                font-size: 2em;
+            }
+            .jogo:hover{
+                filter: grayscale(0%);
+                width: 29vw;
+                height: 39vw;
+                font-size: 0.7em;
+                transition: 0.4s ease-in;
+            }
+            .jogo:hover img{
+                height: 27.5vw;
+                transition: cubic-bezier(0.5,0.2,0,2,0.4);
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">
+                <div class="logo"><img src="../LogoProjeto.png" alt="Logo"></div>
+            </a>
+            <details>
+                <summary class="indice" tabindex="1">☰</summary>
+                <ul class="ulnav">
+                    <li class="headernav"><a class="navlink" tabindex="2" href="index.html" rel="next"><div class="inicio">Início</div></a></li>
+                    <li class="headernav"><a class="navlink" tabindex="3" href="pag6.html" rel="next"><div class="sobre-nos">Fale conosco</div></a></li>
+                    <li class="headernav"><a class="navlink" tabindex="4" href="loading-cadastro.html" rel="nest"><div class="cadastre-se">Cadastre-se</div></a></li>
+                    <li class="headernav"><a class="navlink" tabindex="5" href="loading-login.html" rel="next"><div class="login">Login</div></a></li>
+                    <li class="headernav" class="navlink" tabindex="6" id="accessed"><div class="goty">GOTY</div></li>
+                    <li class="headernav"><a class="navlink" tabindex="7" href="pag5.html" rel="next"><div class="historia">História dos Consoles</div></a></li>
+                </ul>
+            </details>
+        </nav>
+    </header>
+    <div class="corpo">
+        <h1>GAME OF THE YEAR</h1>
+        <br>
+        <p>O Jogo do Ano (do inglês, Game of the Year ou GOTY) é um título dado por várias premiações, revistas, websites e organizações especializadas para um jogo eletrônico. Muitas das publicações e associações dão a designação de Jogo do Ano ao título que consideram representar o ápice do desenvolvimento de jogos naquele ano. Essas organizações o nomeiam de maneiras distintas; muitas delas indicam o seu Jogo do Ano por meio de uma categoria destinada ao melhor jogo, e outras designam por meio de listas de "Melhores Jogos do Ano", com o jogo do ano sendo identificado como o título que se encontra em primeiro lugar em tais listas.</p>
+        <p>Várias premiações de jogos eletrônicos entregam este prêmio anualmente, com o mais popularmente reconhecido sendo entregue pelo The Game Awards, o qual já atingiu números de audiência próximos ao Oscar. Contextualizando, o The Game Awards é uma cerimônia de premiação anual que reconhece os melhores jogos eletrônicos de cada ano e grandes feitos na indústria, foi criada e é apresentada pelo jornalista de jogos eletrônicos Geoff Keighley em 2014.<br>A seguir, confira os jogos que foram premiados como Jogo do Ano nessa cerimônia, desde sua craiação até hoje.</p>
+        <br>
+        <h2>The Game Awards - Premiados</h2>
+        <br>
+        <div class="container">
+            <a href="paginas_goty/dragonage.html" rel="next">
+                <div class="jogo jogo1">
+                    <img src="../jogos_tga/dragon_age_inquisition1.jpg" alt="Capa do jogo: Dragon Age Inquisition">
+                    <br>
+                    <p>Vencedor de 2014</p>
+                    <br>
+                </div>
+            </a>
+
+            <a href="paginas_goty/thewitcher.html" rel="next">
+                <div class="jogo jogo2">
+                    <img src="../jogos_tga/The_Witcher_3_Wild_Hunt_-_cover.jpg" alt="Capa do jogo: The Witcher 3">
+                    <br>
+                    <p>Vencedor de 2015</p>
+                    <br>
+                </div>
+            </a>
+
+            <a href="paginas_goty/overwatch.html" rel="next">
+                <div class="jogo jogo3">
+                    <img src="../jogos_tga/Overwatch_cover_art.jpg" alt="Capa do jogo: Overwatch">
+                    <br>
+                    <p>Vencedor de 2016</p>
+                    <br>
+                </div>
+            </a>
+
+            <a href="paginas_goty/zelda.html" rel="next">
+                <div class="jogo jogo4">
+                    <img src="../jogos_tga/Legend_of_Zelda_Breath_of_the_Wild_capa.png" alt="Capa do jogo: Legend of Zelda Breath of the Wild">
+                    <br>
+                    <p>Vencedor de 2017</p>
+                    <br>
+                </div>
+            </a>
+
+            <a href="paginas_goty/godofwar.html" rel="next">
+                <div class="jogo jogo5">
+                    <img src="../jogos_tga/god_of_war.jpg" alt="Capa do jogo: God of War">
+                    <br>
+                    <p>Vencedor de 2018</p>
+                    <br>
+                </div>
+            </a>
+
+            <a href="paginas_goty/sekiro.html" rel="next">
+                <div class="jogo jogo6">
+                    <img src="../jogos_tga/Sekiro_Shadows_Die_Twice_capa.png" alt="Capa do jogo: Sekiro: Shadows Die Twice">
+                    <br>
+                    <p>Vencedor de 2019</p>
+                    <br>
+                </div>
+            </a>
+
+            <a href="paginas_goty/thelastofus.html" rel="next">
+                <div class="jogo jogo7">
+                    <img src="../jogos_tga/The_Last_of_Us_2_capa.png" alt="Capa do jogo: The LAst of Us part II">
+                    <br>
+                    <p>Vencedor de 2020</p>
+                    <br>
+                </div>
+            </a>
+
+            <a href="paginas_goty/ittakestwo.html" rel="next">
+                <div class="jogo jogo8">
+                    <img src="../jogos_tga/it_takes_two.jpg" alt="Capa do jogo: It Takes Two">
+                    <br>
+                    <p>Vencedor de 2021</p>
+                    <br>
+                </div>
+            </a>
+
+            <a href="paginas_goty/eldenring.html" rel="next">
+                <div class="jogo jogo9">
+                    <img src="../jogos_tga/eldenring.jpg" alt="Capa do jogo: Elden Ring">
+                    <br>
+                    <p>Vencedor de 2022</p>
+                    <br>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

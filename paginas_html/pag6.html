@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../paginas_css/style.css">
+    <link rel="stylesheet" href="../paginas_css/stylepag6.css">
+    <link rel="shortcut icon" href="../LogoProjeto.png" type="image/x-icon">
+    <title>Fale conosco</title>
+    <script>
+      function validar() {
+       // document.getElementById("myform").submit();      
+        window.open("index.html");
+      }
+  
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">
+                <div class="logo"><img src="../LogoProjeto.png" alt="Logo"></div>
+            </a>
+            <details>
+                <summary class="indice" tabindex="1">☰</summary>
+                <ul class="ulnav">
+                    <li class="headernav"><a class="navlink" tabindex="2" href="index.html" rel="next"><div class="inicio">Início</div></a></li>
+                    <li class="headernav" class="navlink" tabindex="3" id="accessed"><div class="sobre-nos">Fale conosco</div></li>
+                    <li class="headernav"><a class="navlink" tabindex="4" href="loading-cadastro.html" rel="nest"><div class="cadastre-se">Cadastre-se</div></a></li>
+                    <li class="headernav"><a class="navlink" tabindex="5" href="loading-login.html" rel="next"><div class="login">Login</div></a></li>
+                    <li class="headernav"><a class="navlink" tabindex="6" href="pag2.html" rel="next"><div class="goty">GOTY</div></a></li>
+                    <li class="headernav"><a class="navlink" tabindex="7" href="pag5.html" rel="next"><div class="historia">História dos Consoles</div></a></li>
+                </ul>
+            </details>
+        </nav>
+    </header>
+        <main>
+            <section>
+              <h1>Fale Conosco !</h1>
+              <h2>Esta com algum problema? Encontrou algum bug?<br>Nos ajude dando seu feedback e seu apoio!</h2>
+              <form id="myform" onsubmit="return validar();">
+                <label class="label-field">Com o que podemos te ajudar?</label>
+                <select required>
+                  <option selected></option>
+                  <option value="problema">Estou com um problema</option>
+                  <option value="bug">Encontrei um bug no site</option>
+                  <option value="outro">Outro...</option>
+                </select>
+                <label for="nome" class="label-field">Seu nome</label>
+                <input name="nome" type="text" class="" contenteditable="true" required placeholder="Insira seu nome">
+                <label for="email" class="label-field">Endereço de e-mail</label>
+                <input name="email" type="email" class="" contenteditable="true" required placeholder="Insira seu E-mail">
+                <label for="details" class="label-field">Detalhes</label>
+                <textarea class="text-details" placeholder="Por favor nos descreva seu problema com o máximo de informções possíveis." rows="5"></textarea>
+                <div class="botao"><a href="index.html" rel="next" target="_self"><span><input type="submit" class="button" value="Enviar"></span></a></div>
+              </form>
+              
+              <h1 id="h1">Nos contate diretamente</h1>
+              <table cellspacing="0">
+                <tr>
+                  <th>Desenvolvedor</th>
+                  <th>Email Profissional</th>
+                  <th>Telefone Profissional</th>
+                </tr>
+                <tr>
+                  <td>Enzo Olivato Pazian</td>
+                  <td class="email-table"><a href="">EnzopGOTY@gmail.com</a></td>
+                  <td>(19)96814-3954</td>
+                </tr>
+                <tr>
+                  <td>Vitor Henrique Silva Nascimento</td>
+                  <td class="email-table"><a href="">VitorHGOTY@gmail.com</a></td>
+                  <td>(19)96840-3085</td>
+                </tr>
+              </table>
+            </section>
+          </main>
+</body>
+</html>

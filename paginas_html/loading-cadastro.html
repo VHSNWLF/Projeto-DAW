@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="0.9;url=pag4.html">
+    <link rel="shortcut icon" href="../LogoProjeto.png" type="image/x-icon">
+    <title>. . .</title>
+    <style>
+        img{
+            height: 130px;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-image: linear-gradient(to bottom, #1b2223 30%, #065c4c 70%, #3ebca5 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation-name: loading ;
+            animation-duration: 1.3s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-timing-function: ease;
+        }
+        @keyframes loading{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div><img src="../controle.png" alt=""></div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+body{
+    margin-top: 0;
+    background: linear-gradient(to bottom, #1B2223 30%, #065c4c 70%, #3ebca5 100%);
+    background-repeat: no-repeat;
+    background-color: #3ebca5;
+    height: 110%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    flex-wrap: wrap;
+    color: #F4FEFD;
+}
+
+.corpo{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+h1{
+    font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    color: #F4FEFD;
+    font-size: 6dvw;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #0EF6CC;
+    border-top: 1px solid #0EF6CC;
+}
+
+.load {
+    animation-name: load;
+    animation-duration: 1.3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+img{
+    width: 20vw;
+}
+
+@keyframes load{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

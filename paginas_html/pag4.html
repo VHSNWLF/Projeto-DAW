@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastre-se</title>
+  <link rel="stylesheet" href="../paginas_css/stylepag4.css">
+  <link rel="stylesheet" href="../paginas_css/style.css">
+  <link rel="shortcut icon" href="../LogoProjeto.png" type="image/x-icon">
+  <script>
+    function validar() {
+     // document.getElementById("myform").submit();      
+      window.open("index.html");
+    }
+
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+       
+        <div class="logo"><a href="index.html"><img src="../LogoProjeto.png" alt="Logo"></a></div>
+    
+        <details>
+            <summary class="indice" tabindex="1">☰</summary>
+            <ul class="ulnav">
+                <li class="headernav"><a class="navlink" tabindex="2" href="index.html" rel="next"><div class="inicio">Início</div></a></li>
+                <li class="headernav"><a class="navlink" tabindex="3" href="pag6.html" rel="next"><div class="sobre-nos">Fale conosco</div></a></li>
+                <li class="headernav" class="navlink" tabindex="4" id="accessed"><div class="cadastre-se">Cadastre-se</div></li>
+                <li class="headernav"><a class="navlink" tabindex="5" href="loading-login.html" rel="next"><div class="login">Login</div></a></li>
+                <li class="headernav"><a class="navlink" tabindex="6" href="pag2.html" rel="next"><div class="goty">GOTY</div></a></li>
+                <li class="headernav"><a class="navlink" tabindex="7" href="pag5.html" rel="next"><div class="historia">História dos Consoles</div></a></li>
+            </ul>
+        </details>
+    </nav>
+</header>
+  <main>
+    <section>
+      <div class="container">
+          <h1 class="texto-cadastre-se">Cadastre-se</h1>
+          <form id="myform" onsubmit="return validar();">
+            <label class="label" for="NomeUsuario">Nome de Usuário</label>
+            <input class="input" required placeholder="Insira um nome de usuário" type="text" name="NomeUsuario">
+            <label class="label" for="Email">Email</label>
+            <input class="input" required placeholder="Insira um email válido" type="email" name="Email">
+            <label class="label" for="Telefone">Telefone</label>
+            <input class="input" type="tel" name="Telefone" placeholder="Insira um numero de telefone">
+            <label class="label" for="DataNascimento">Data de Nascimento</label>
+            <input class="input" required type="date" name="DataNascimento" placeholder="Insira sua data de nascimento">
+            <label class="label" for="Sexo">Sexo</label>
+            <select name="sexo">
+              <option selected></option>
+              <option value="F">Feminino</option>
+              <option value="M">Masculino</option>
+              <option value="null">Prefiro não dizer</option>
+            </select>
+            <label class="label" for="Imagem">Foto de Perfil</label>
+            <input class="input-Imagem" type="file" name="Imagem">
+            <div class="botao"><a href="index.html" rel="next" target="_self"><span><input type="submit" class="button" value="Cadastre-se"></span></a></div>
+          </form>
+        </div>
+    </section>
+  </main>
+</body>
+</html>
+
